@@ -1,0 +1,9 @@
+spring.application.name: Zuul
+server.port: 8080
+zuul:
+  ignored-patterns: '*'
+  prefix: /api
+  routes:
+    customers:
+      path: /v1/customers/**
+      service-id: Customers
